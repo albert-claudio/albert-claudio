@@ -1,8 +1,8 @@
-### Oi Sou Albert Claudio, Sou Atualmente Programmer/Dev Front end
+### Sou Albert Claudio, Atualmente Sou Programmer/Dev Front End
 
 - 🔭 Atualmente estou trabalhando com o Front end
-- 🌱 Estou apredendo React.js/Next.js/Typescript
-- 😄 Pronouns: Him/His
+- 🌱 Estou apredendo React.js/Typescript
+- Pronouns: Him/His
 <div style="display: inline_block"><br>
   <img align="center" alt="Albert-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Albert-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
@@ -10,6 +10,7 @@
   <img align="center" alt="Albert-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="Albert-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="Albert-Tailwindcss" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg">
+<img align="center" alt="Albert-Tailwindcss" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg">
 </div>
 
 ##
