@@ -1,7 +1,7 @@
 ### Sou Albert Claudio, Atualmente Sou Programmer/Dev Front End
 
 - 🔭 Atualmente estou trabalhando com o Front end
-- 📖 Estou apredendo React.js/Typescript
+- 📖 Estou atualmente estudando ADS
 - Pronouns: Him/His
 <div style="display: inline_block"><br>
   <img align="center" alt="Albert-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
