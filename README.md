@@ -1,5 +1,4 @@
 ### Sou Albert Claudio, Atualmente Sou Programmer/Dev Front End
-
 - 🔭 Atualmente estou trabalhando com o Front end
 - 📖 Estou atualmente estudando ADS
 - Pronouns: Him/His
@@ -12,6 +11,10 @@
   <img align="center" alt="Albert-Tailwindcss" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg">
 <img align="center" alt="Albert-Tailwindcss" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg">
 </div>
+
+<hr>
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
 
 ##
 <div> 
