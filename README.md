@@ -32,6 +32,8 @@
 ![Mongo](https://img.shields.io/badge/-mongo-0D1117?style=for-the-badge&logo=mongodb&logoColor=darkgreen&labelColor=0D1117)&nbsp; 
 ![SQL](https://img.shields.io/badge/-SQL-0D1117?style=for-the-badge&logo=mysql&logoColor=blue&labelColor=0D1117)&nbsp;
 ![Node.js](https://img.shields.io/badge/-node-0D1117?style=for-the-badge&logo=node.js&logoColor=darkgreen&labelColor=0D1117)&nbsp;
+<a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="35" height="35"/> 
+  </a> 
 
 
 <div align="center">
