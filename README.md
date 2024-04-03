@@ -8,9 +8,7 @@
 
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=albert-claudio&bg_color=0d1117&color=43aae6&line=43aae6&point=ff9494&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=albert-claudio&theme=dracula&row=2&no-bg=true&column=3&margin-w=15&margin-h=15" />
-</p>
+
 
 <div align="center"> 
 <a href="https://instagram.com/albertclaudioo" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"</a>
@@ -21,19 +19,10 @@
  </div>
 
  ### Main skills:
-![JavaScript](https://img.shields.io/badge/-JavaScript-0D1117?style=for-the-badge&logo=javascript&labelColor=0D1117)&nbsp;
-![CSS](https://img.shields.io/badge/-CSS-0D1117?style=for-the-badge&logo=CSS3&logoColor=1572B6&labelColor=0D1117)&nbsp;
-![HTML](https://img.shields.io/badge/-HTML-0D1117?style=for-the-badge&logo=HTML5&logoColor=red&labelColor=0D1117)&nbsp;
-![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
-![C](https://img.shields.io/badge/-c-0D1117?style=for-the-badge&logo=c&logoColor=blue&labelColor=0D1117)&nbsp; 
+[![SkillIcons](https://skillicons.dev/icons?i=js,react,c,html,css,tailwind,bootstrap )](https://skillicons.dev)
 
 ### Studying in this moment:
-![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
-![Mongo](https://img.shields.io/badge/-mongo-0D1117?style=for-the-badge&logo=mongodb&logoColor=darkgreen&labelColor=0D1117)&nbsp; 
-![SQL](https://img.shields.io/badge/-SQL-0D1117?style=for-the-badge&logo=mysql&logoColor=blue&labelColor=0D1117)&nbsp;
-![Node.js](https://img.shields.io/badge/-node-0D1117?style=for-the-badge&logo=node.js&logoColor=darkgreen&labelColor=0D1117)&nbsp;
-<a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="35" height="35"/> 
-  </a> 
+[![SkillIcons](https://skillicons.dev/icons?i=react,java,mysql,nodejs,mongodb,python)](https://skillicons.dev) 
 
 
 <div align="center">
