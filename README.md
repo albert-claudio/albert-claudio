@@ -22,7 +22,7 @@
 [![SkillIcons](https://skillicons.dev/icons?i=js,react,c,html,css,tailwind,bootstrap )](https://skillicons.dev)
 
 ### Studying in this moment:
-[![SkillIcons](https://skillicons.dev/icons?i=react,java,mysql,nodejs,mongodb,php)](https://skillicons.dev) 
+[![SkillIcons](https://skillicons.dev/icons?i=react,java,mysql,nodejs,mongodb)](https://skillicons.dev) 
 
 
 <div align="center">
