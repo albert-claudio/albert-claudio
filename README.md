@@ -1,5 +1,5 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=65e6fc&height=120&section=header"/>
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=herokuapp&weight=500&size=35&pause=1000&center=true&Center=true&width=1000&lines=MY+NAME+is+Albert+Claudio;I'm+From+Brazil;I'm+Work+with+React.js+and+Node.js" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=herokuapp&weight=500&size=35&pause=1000&center=true&Center=true&width=1000&lines=MY+NAME+IS+Albert+Claudio;I'M+FROM+Brazil;I'M+WORK+WITH+React.js+AND+Node.js" alt="Typing SVG" /></a>
 
 <div align="center">  
   <img width="49%" height="195px" src="https://github-readme-stats.vercel.app/api?username=albert-claudio&show_icons=true&count_private=true&hide_border=true&title_color=65e6fc&icon_color=65efc&text_color=c9d1d9&bg_color=0d1117" alt="Albert Claudio github stats" /> 
