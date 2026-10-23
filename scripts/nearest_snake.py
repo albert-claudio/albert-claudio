@@ -99,13 +99,13 @@ def natural_route(grid, seed):
                 continue
             free_space = len(d)
             # Do not create sealed pockets before collecting the rest.
-            if foods - {next_pos} and free_space < min(len(foods - {next_pos}) + 2, width * 7 - len(updated)):
+            if foods - {next_pos} and free_space < min(8, width * 7 - len(updated)):
                 continue
             # Prefer food nearby; turn naturally when equally good, with
             # deterministic tie-breaking variations on each attempt.
             direction = ((next_pos[0] - body[0][0]), (next_pos[1] - body[0][1]))
             old_direction = ((body[0][0] - body[1][0]), (body[0][1] - body[1][1])) if len(body) > 1 else None
-            score = (0 if next_pos in foods else 1, nearest, -free_space,
+            score = (nearest, 0 if next_pos in foods else 1, -free_space,
                      0 if old_direction is not None and direction != old_direction else 1,
                      randomizer.random())
             ranked.append((score, next_pos, updated))
@@ -184,13 +184,17 @@ def fallback_route(grid):
 
 
 def make_route(grid):
-    for seed in range(16):
+    # Never silently revert to the rigid column-by-column sweep.
+    # Explore deterministic variations of the flexible food-seeking route.
+    for seed in range(256):
         candidate = natural_route(grid, seed)
         if candidate is not None:
+            print(f"Using flexible nearest-food route (seed {seed})")
             return candidate
-    # Dense layouts can defeat a nearest-food greedy strategy.
-    # The safe fallback guarantees all food is consumed.
-    return fallback_route(grid)
+    raise RuntimeError(
+        "No collision-free nearest-food path found. "
+        "Refusing to publish the old rigid zigzag animation."
+    )
 
 
 def svg(grid, route, dark):
