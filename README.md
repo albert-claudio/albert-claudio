@@ -8,9 +8,6 @@
 </div>
 
 <br>
-
-[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=albert-claudio&bg_color=0d1117&color=43aae6&line=43aae6&point=ff9494&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
 <br>
 
 <!-- Snake Animation -->
