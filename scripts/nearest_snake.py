@@ -35,7 +35,115 @@ def get_grid():
     return [[day["contributionCount"] for day in week["contributionDays"]] for week in weeks]
 
 
-def make_route(grid):
+from collections import deque
+from random import Random
+
+DIRECTIONS = ((1, 0), (0, 1), (-1, 0), (0, -1))
+
+
+def adjacent(p, width):
+    for dx, dy in DIRECTIONS:
+        q = (p[0] + dx, p[1] + dy)
+        if 0 <= q[0] < width and 0 <= q[1] < 7:
+            yield q
+
+
+def distances(start, blocked, width):
+    result = {start: 0}
+    pending = deque([start])
+    while pending:
+        current = pending.popleft()
+        for pos in adjacent(current, width):
+            if pos not in blocked and pos not in result:
+                result[pos] = result[current] + 1
+                pending.append(pos)
+    return result
+
+
+def simulate(body, position, remaining):
+    grows = position in remaining
+    occupied = set(body if grows else list(body)[:-1])
+    if position in occupied:
+        return None
+    new_body = deque([position])
+    new_body.extend(body)
+    if not grows:
+        new_body.pop()
+    return new_body
+
+
+def natural_route(grid, seed):
+    width = len(grid)
+    foods = {(x, y) for x, week in enumerate(grid) for y, count in enumerate(week) if count}
+    body = deque([(0, 0)])
+    route = [(0, 0)]
+    foods.discard((0, 0))
+    randomizer = Random(seed)
+    max_steps = max(1400, width * 7 * 14)
+
+    for step in range(max_steps):
+        if not foods:
+            break
+        ranked = []
+        for next_pos in adjacent(body[0], width):
+            if len(body) > 1 and next_pos == body[1]:
+                continue  # never reverse into the neck
+            updated = simulate(body, next_pos, foods)
+            if updated is None:
+                continue
+            occupied = set(updated)
+            occupied.discard(updated[-1])  # tail can move away next frame
+            d = distances(next_pos, occupied, width)
+            nearest = min((d.get(food, 100000) for food in foods if food != next_pos), default=0)
+            if nearest == 100000:
+                continue
+            free_space = len(d)
+            # Do not create sealed pockets before collecting the rest.
+            if foods - {next_pos} and free_space < min(len(foods - {next_pos}) + 2, width * 7 - len(updated)):
+                continue
+            # Prefer food nearby; turn naturally when equally good, with
+            # deterministic tie-breaking variations on each attempt.
+            direction = ((next_pos[0] - body[0][0]), (next_pos[1] - body[0][1]))
+            old_direction = ((body[0][0] - body[1][0]), (body[0][1] - body[1][1])) if len(body) > 1 else None
+            score = (0 if next_pos in foods else 1, nearest, -free_space,
+                     0 if old_direction is not None and direction != old_direction else 1,
+                     randomizer.random())
+            ranked.append((score, next_pos, updated))
+        if not ranked:
+            return None
+        _, chosen, body = min(ranked, key=lambda item: item[0])
+        route.append(chosen)
+        foods.discard(chosen)
+    if foods:
+        return None
+
+    # Once all food is gone, intentionally collide with a non-neck body cell.
+    # No 180-degree turn is allowed even for this final move.
+    for _ in range(width * 7 * 5):
+        head = body[0]
+        neighbors = [p for p in adjacent(head, width) if len(body) < 2 or p != body[1]]
+        for position in neighbors:
+            if position in list(body)[:-1]:
+                route.append(position)
+                return route
+        safe = []
+        for position in neighbors:
+            next_body = simulate(body, position, set())
+            if next_body is not None:
+                blocked = set(next_body)
+                blocked.discard(next_body[-1])
+                space = len(distances(position, blocked, width))
+                crowd = min((abs(position[0]-part[0]) + abs(position[1]-part[1])
+                             for part in list(next_body)[2:]), default=999)
+                safe.append(((crowd, -space, randomizer.random()), position, next_body))
+        if not safe:
+            break
+        _, position, body = min(safe, key=lambda item: item[0])
+        route.append(position)
+    return None
+
+
+def fallback_route(grid):
     """A single non-overlapping, adjacent-cell sweep: no reverse and no early self-collision.
 
     Keep the top row until last. Cover columns left-to-right, then return on
@@ -72,6 +180,17 @@ def make_route(grid):
         for i in range(2, len(route))
     )
     return route
+
+
+
+def make_route(grid):
+    for seed in range(16):
+        candidate = natural_route(grid, seed)
+        if candidate is not None:
+            return candidate
+    # Dense layouts can defeat a nearest-food greedy strategy.
+    # The safe fallback guarantees all food is consumed.
+    return fallback_route(grid)
 
 
 def svg(grid, route, dark):
