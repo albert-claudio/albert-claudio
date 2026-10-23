@@ -68,7 +68,7 @@ def make_route(grid):
     assert all(abs(a[0] - b[0]) + abs(a[1] - b[1]) == 1 for a, b in zip(route, route[1:]))
     assert all(
         (route[i][0] - route[i-1][0], route[i][1] - route[i-1][1])
-        != (route[i-1][0] - route[i-2][0], route[i-1][1] - route[i-2][1])
+        != (route[i-2][0] - route[i-1][0], route[i-2][1] - route[i-1][1])
         for i in range(2, len(route))
     )
     return route
