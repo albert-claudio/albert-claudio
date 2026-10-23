@@ -79,7 +79,7 @@ def natural_route(grid, seed):
     route = [(0, 0)]
     foods.discard((0, 0))
     randomizer = Random(seed)
-    max_steps = max(1400, width * 7 * 14)
+    max_steps = width * 7 * 3
 
     for step in range(max_steps):
         if not foods:
@@ -186,14 +186,15 @@ def fallback_route(grid):
 def make_route(grid):
     # Never silently revert to the rigid column-by-column sweep.
     # Explore deterministic variations of the flexible food-seeking route.
-    for seed in range(256):
+    for seed in range(6):
+        print(f'Trying safe route {seed + 1}/6', flush=True)
         candidate = natural_route(grid, seed)
         if candidate is not None:
             print(f"Using flexible nearest-food route (seed {seed})")
             return candidate
     raise RuntimeError(
-        "No collision-free nearest-food path found. "
-        "Refusing to publish the old rigid zigzag animation."
+        'No complete safe food-seeking route found within the bounded search. '
+        'The previous SVG remains intact.'
     )
 
 
